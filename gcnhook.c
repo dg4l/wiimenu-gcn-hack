@@ -52,7 +52,6 @@ typedef struct State {
     bool present;
     bool hijacked;
     bool inited;
-    u8 p2[3];
 } State;
 
 #define PADInit ((void (*)(void))0x815767D4)
