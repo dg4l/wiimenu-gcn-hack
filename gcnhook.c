@@ -54,6 +54,24 @@ typedef struct State {
     bool inited;
 } State;
 
+#if defined(REGION_EU)
+
+#define PADInit ((void (*)(void))0x815768D0)
+#define PADRead ((u32 (*)(PADStatus*))0x81576A2C)
+#define PADReset ((u32 (*)(u32))0x815766BC)
+#define WPADDisconnect ((s32 (*)(s32))0x8157AA5C)
+#define KPADEnableDPD ((void (*)(s32))0x815884AC)
+#define absclamp ((f32 (*)(const f32*, const f32*))0x8133675C)
+#define MgrRead ((void (*)(void*))0x81337570)
+#define RevoRead ((void (*)(void*))0x8133613C)
+
+#define manager (*(void**)0x81089070)
+#define state (*(State*)0x81359F88)
+
+#define REVO_VTABLE 0x81634AA4
+
+#else
+
 #define PADInit ((void (*)(void))0x815767D4)
 #define PADRead ((u32 (*)(PADStatus*))0x81576930)
 #define PADReset ((u32 (*)(u32))0x815765C0)
@@ -67,6 +85,8 @@ typedef struct State {
 #define state (*(State*)0x81359EE0)
 
 #define REVO_VTABLE 0x816347F4
+
+#endif
 
 #define PAD_ERR_NONE 0
 #define PAD_ERR_NO_CONTROLLER -1

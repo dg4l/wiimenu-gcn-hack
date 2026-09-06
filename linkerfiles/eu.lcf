@@ -1,0 +1,11 @@
+MEMORY {
+    cc : origin = 0x8135A244
+    dc : origin = 0x81359F3C
+}
+
+SECTIONS {
+    GROUP: { .text : {} } > cc
+    GROUP: { .rodata : {} .data : {} .bss : {} } > dc
+    _savegpr_27 = 0x815F9718;
+    _restgpr_27 = 0x815F9764;
+}
