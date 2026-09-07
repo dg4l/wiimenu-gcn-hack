@@ -70,6 +70,22 @@ typedef struct State {
 
 #define REVO_VTABLE 0x81634AA4
 
+#elif defined(REGION_JP)
+
+#define PADInit ((void (*)(void))0x8159F714)
+#define PADRead ((u32 (*)(PADStatus*))0x8159F870)
+#define PADReset ((u32 (*)(u32))0x8159F500)
+#define WPADDisconnect ((s32 (*)(s32))0x815A38A0)
+#define KPADEnableDPD ((void (*)(s32))0x815B12F0)
+#define absclamp ((f32 (*)(const f32*, const f32*))0x81335BCC)
+#define MgrRead ((void (*)(void*))0x813369E0)
+#define RevoRead ((void (*)(void*))0x813355AC)
+
+#define manager (*(void**)0x81089070)
+#define state (*(State*)0x813593A0)
+
+#define REVO_VTABLE 0x81665144
+
 #else
 
 #define PADInit ((void (*)(void))0x815767D4)
