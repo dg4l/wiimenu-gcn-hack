@@ -6,6 +6,40 @@ MEMORY {
 SECTIONS {
     GROUP: { .text : {} } > cc
     GROUP: { .rodata : {} .data : {} .bss : {} } > dc
+    _savegpr_14 = 0x815F948C;
+    _restgpr_14 = 0x815F94D8;
+    _savegpr_15 = 0x815F9490;
+    _restgpr_15 = 0x815F94DC;
+    _savegpr_16 = 0x815F9494;
+    _restgpr_16 = 0x815F94E0;
+    _savegpr_17 = 0x815F9498;
+    _restgpr_17 = 0x815F94E4;
+    _savegpr_18 = 0x815F949C;
+    _restgpr_18 = 0x815F94E8;
+    _savegpr_19 = 0x815F94A0;
+    _restgpr_19 = 0x815F94EC;
+    _savegpr_20 = 0x815F94A4;
+    _restgpr_20 = 0x815F94F0;
+    _savegpr_21 = 0x815F94A8;
+    _restgpr_21 = 0x815F94F4;
+    _savegpr_22 = 0x815F94AC;
+    _restgpr_22 = 0x815F94F8;
+    _savegpr_23 = 0x815F94B0;
+    _restgpr_23 = 0x815F94FC;
+    _savegpr_24 = 0x815F94B4;
+    _restgpr_24 = 0x815F9500;
+    _savegpr_25 = 0x815F94B8;
+    _restgpr_25 = 0x815F9504;
+    _savegpr_26 = 0x815F94BC;
+    _restgpr_26 = 0x815F9508;
     _savegpr_27 = 0x815F94C0;
     _restgpr_27 = 0x815F950C;
+    _savegpr_28 = 0x815F94C4;
+    _restgpr_28 = 0x815F9510;
+    _savegpr_29 = 0x815F94C8;
+    _restgpr_29 = 0x815F9514;
+    _savegpr_30 = 0x815F94CC;
+    _restgpr_30 = 0x815F9518;
+    _savegpr_31 = 0x815F94D0;
+    _restgpr_31 = 0x815F951C;
 }

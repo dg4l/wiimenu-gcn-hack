@@ -1,0 +1,45 @@
+MEMORY {
+    cc : origin = 0x8135965C
+    dc : origin = 0x81359354
+}
+
+SECTIONS {
+    GROUP: { .text : {} } > cc
+    GROUP: { .rodata : {} .data : {} .bss : {} } > dc
+    _savegpr_14 = 0x816226A8;
+    _restgpr_14 = 0x816226F4;
+    _savegpr_15 = 0x816226AC;
+    _restgpr_15 = 0x816226F8;
+    _savegpr_16 = 0x816226B0;
+    _restgpr_16 = 0x816226FC;
+    _savegpr_17 = 0x816226B4;
+    _restgpr_17 = 0x81622700;
+    _savegpr_18 = 0x816226B8;
+    _restgpr_18 = 0x81622704;
+    _savegpr_19 = 0x816226BC;
+    _restgpr_19 = 0x81622708;
+    _savegpr_20 = 0x816226C0;
+    _restgpr_20 = 0x8162270C;
+    _savegpr_21 = 0x816226C4;
+    _restgpr_21 = 0x81622710;
+    _savegpr_22 = 0x816226C8;
+    _restgpr_22 = 0x81622714;
+    _savegpr_23 = 0x816226CC;
+    _restgpr_23 = 0x81622718;
+    _savegpr_24 = 0x816226D0;
+    _restgpr_24 = 0x8162271C;
+    _savegpr_25 = 0x816226D4;
+    _restgpr_25 = 0x81622720;
+    _savegpr_26 = 0x816226D8;
+    _restgpr_26 = 0x81622724;
+    _savegpr_27 = 0x816226DC;
+    _restgpr_27 = 0x81622728;
+    _savegpr_28 = 0x816226E0;
+    _restgpr_28 = 0x8162272C;
+    _savegpr_29 = 0x816226E4;
+    _restgpr_29 = 0x81622730;
+    _savegpr_30 = 0x816226E8;
+    _restgpr_30 = 0x81622734;
+    _savegpr_31 = 0x816226EC;
+    _restgpr_31 = 0x81622738;
+}
