@@ -1,6 +1,6 @@
 # wiimenu-gcn-hack
 
-Priiloader hack to use GameCube controllers on the wii menu, only works on 4.3u afaik for now...
+Priiloader hack to use GameCube controllers on the wii menu, only works on 4.3u and 4.3e afaik for now...
 
 ## Installation
 
