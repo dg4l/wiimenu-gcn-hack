@@ -155,7 +155,7 @@ void gcnhook(void) {
         gcRawBtn = state.pad[0].button;
         btn = 0;
         for (i = 0; i < 20; i += 2) {
-            if (w & gcBtnMap[i]) {
+            if (gcRawBtn & gcBtnMap[i]) {
                 btn |= gcBtnMap[i + 1];
             }
         }
