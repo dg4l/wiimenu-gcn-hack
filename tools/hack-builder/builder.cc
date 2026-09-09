@@ -55,20 +55,6 @@ class ElfStuff {
             strtab = sections[symtab.link];
         }
 
-        std::unordered_map<std::string, std::pair<uint32_t, uint16_t>> get_symbols() {
-            std::unordered_map<std::string, std::pair<uint32_t, uint16_t>> ret;
-            for (uint32_t i = 0; i < symtab.size / 0x10; ++i) {
-                size_t off = symtab.offset + i * 0x10;
-                uint32_t name_off = u32(off);
-                uint32_t value = u32(off + 4);
-                uint16_t shndx = u16(off + 14);
-                if (!shndx) continue;
-                auto name = str(strtab.offset, name_off);
-                if (!name.empty() && !ret.contains(name)) ret[name] = {value, shndx};
-            }
-            return ret;
-        }
-
         uint16_t u16(size_t o) const {
             return (data[o] << 8) | data[o + 1];
         }
