@@ -177,7 +177,7 @@ void gcnhook(void) {
             state.revo.vtable = REVO_VTABLE;
             state.revo.rumbleType = -1;
             state.revo.chan = 0;
-            state.revo.type = 2;
+            state.revo.type = 0;
             state.revo.kpad = &state.kpad;
         }
         if (slot0) {
